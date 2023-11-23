@@ -37,10 +37,11 @@ public class Main {
                             """.formatted(
                                     weatherFromOpenWeather.getDt(),
                             weatherFromOpenWeather.getName(),
-                            weatherFromOpenWeather.getWind(),
+                            weatherFromOpenWeather.getWind().getSpeed(),
                             weatherFromOpenWeather.getMain().getTemp(),
                             weatherFromOpenWeather.getMain().getPressure()
                     );
+                    System.out.println(message);
                 }
                 default -> System.out.println("ERROR! INVALID INPUT!");
                 }
